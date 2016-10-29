@@ -1,0 +1,93 @@
+{
+  "innerRadius": 135,
+  "width": 570,
+  "height": 570,
+  "key": "example-chart-1",
+  "sections": [
+    {
+      "class": "\\vulkan\\Components\\VisualChart\\VisualChartSection",
+      "key": "lovely",
+      "info": {
+        "class": "\\vulkan\\Core\\ChartSectionInfo",
+        "dateTime": "1975-11-04 18:15:00",
+        "gmt": "02:00"
+      },
+      "width": 30,
+      "points": [
+        0,        1,        2,        3,        4,        5,        6
+      ],
+      "scales": [
+        {
+          "class": "\\vulkan\\Components\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            0,
+            0.2
+          ],
+          "sectorCount": 72
+        }
+      ],
+      "pointFontSize": 18,
+      "showPointInfo": false,
+      "houses": []
+    },
+    {
+      "class": "\\vulkan\\Components\\VisualChart\\VisualChartSection",
+      "key": "key-2",
+      "cssClass": "section-1",
+      "info": {
+        "class": "\\vulkan\\Core\\ChartSectionInfo",
+        "dateTime": "1920-07-09 18:15:00",
+        "gmt": "03:00"
+      },
+      "width": 54,
+      "points": [
+        0,        1,        2,        3,        4,        5,        6,        7,        8,        9,        10
+      ],
+      "houses": [],
+      "pointFontSize": 22
+    },
+    {
+      "class": "\\vulkan\\Components\\VisualChart\\VisualChartSection",
+      "width": 30,
+      "key": "system",
+      "scales": [
+        {
+          "class": "\\vulkan\\Components\\VisualChart\\VisualAstroSignScale",
+          "clip": [
+            0,
+            0.95
+          ],
+          "sectorCount": 12,
+          "majorStep": 3
+        },
+        {
+          "class": "\\vulkan\\Components\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            1,
+            1.2
+          ],
+          "sectorCount": 72,
+          "majorStep": 2
+        },
+        {
+          "class": "\\vulkan\\Components\\VisualChart\\GlobalHouseSectionScale",
+          "attachedSection": "key-2",
+          "stickOutDistance": 40
+        }
+      ]
+    }
+  ],
+  "aspectManager": {
+    "class": "vulkan\\Core\\AspectsOrbs\\AspectManager",
+    "orbCalcType": 2,
+    "aspectSet": {
+      "class": "vulkan\\Core\\AspectsOrbs\\GeneralAspectSet"
+    },
+    "aspectedSections": {
+      "keys": [
+        "lovely",
+        "key-2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "vulkan/vulkan-astrosystem",
+    "description": "Astrological system",
+    "type": "php component",
+    "license": "BSD 3-Clause",
+    "keywords": ["astrology", "natal", "chart"],
+    "authors": [
+        {
+            "name": "Zemlyansky Alexander",
+        }
+    ],
+    "require": {
+        php": "^7.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "vulkan\\": "\\src"
+            "vulkan\\front": "\\front"
+        }
+    }
+}
