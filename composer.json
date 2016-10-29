@@ -1,23 +1,25 @@
 {
-    "name": "osoznan/vulkan-astrosystem",
-    "description": "Astrological system",
-    "type": "php component",
-    "homepage": "http://astrolog-online.net",
-    "license": "BSD 3-Clause",
-    "keywords": ["astrology", "natal", "chart"],
-    "minimum-stability": "dev",
-    "authors": [
-        {
-            "name": "Zemlyansky Alexander",
-        }
-    ],
-    "require": {
-        php": ">=7.0",
-    },
-    "autoload": {
-        "psr-4": {
-            "vulkan\\": "\\src"
-            "vulkan\\front": "\\front"
-        }
+  "name": "osoznan/vulkan-astrosystem",
+  "description": "Astrological system",
+  "type": "library",
+  "version": "0.1",
+  "homepage": "http://astrolog-online.net",
+  "license": "BSD-3-Clause",
+  "keywords": ["astrology", "natal", "chart"],
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Zemlyansky Alexander",
+      "email": "meraponimaniya@mail.ru"
     }
+  ],
+  "require": {
+    "php": ">=7.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "vulkan\\": "\\src"
+      "vulkan\\front": "\\front"
+    }
+  }
 }
