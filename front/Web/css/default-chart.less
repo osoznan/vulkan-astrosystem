@@ -1,0 +1,203 @@
+@fireColor: #f55;
+@earthColor: #5f5;
+@airColor: #fa0;
+@waterColor: #57f;
+
+@asMcColor: #f00;
+@dsIcColor: #0a6;
+
+@lightColor: #ffe;
+@darkColor: #222;
+@harshColor: #f33;
+
+@harmonicAspectColor: #4f4;
+@stressedAspectColor: #f53;
+
+@divisionMajor: #ff9;
+@divisionMinor: #eee;
+
+@pointCaptionColor: #ddd;
+
+@hoverColor: #f31;
+
+@smallFontSize: 10px;
+@zoomInFontSize: 16px;
+
+.vul {
+  &-container  {
+    fill: #000;
+  }
+  &-inner-circle {
+    opacity: 0.7;
+  }
+  &-scale {
+    &-inner-circle {
+      stroke: @lightColor;
+    }
+    &-outer-circle {
+      stroke: @lightColor
+    }
+    &-ring {
+      opacity: 0.7;
+    }
+
+    &-divisions {
+      stroke: @divisionMinor;
+      stroke-width: 1px;
+      stroke-dasharray: none;
+    }
+    &-major-divisions {
+      stroke: @divisionMajor;
+      stroke-width: 2px;
+      stroke-dashoffset: 3px 1px;
+    }
+    &-captions > text {
+      text-anchor: middle;
+      cursor: pointer;
+      &:nth-child(4n+1) {
+        stroke: @fireColor;
+      }
+      &:nth-child(4n+2) {
+        stroke: @earthColor;
+      }
+      &:nth-child(4n+3) {
+        stroke: @airColor;
+      }
+      &:nth-child(4n+4) {
+        stroke: @waterColor;
+      }
+    }
+  }
+
+  &-point {
+    stroke: @pointCaptionColor;
+    cursor: pointer;
+    text-anchor: middle;
+    &:hover {
+      stroke: @hoverColor;
+      .vul-point-retrograde {
+        stroke: @hoverColor;
+      }
+    }
+    &-pos {
+      fill: #eff;
+      opacity: 0.7;
+      &-inner {
+        fill: none;
+      }
+    }
+    &-info-caption {
+      &:hover {
+        font-size: @zoomInFontSize;
+      }
+    }
+    .vul-point-retrograde {
+      stroke: @harshColor;
+      font-size: @smallFontSize;
+    }
+  }
+
+  &-section {
+    fill: @darkColor;
+    &-ring {
+      fill: @darkColor;
+    }
+  }
+
+  &-global-house-scale {
+    .vul-scale{
+      &-divisions > line {
+        stroke: #aaf;
+        stroke-width: 2px;
+        &:nth-child(1), &:nth-child(10) {
+          stroke: @asMcColor;
+          stroke-width: 3px;
+        }
+        &:nth-child(4), &:nth-child(7) {
+          stroke: @dsIcColor;
+          stroke-width: 3px;
+        }
+      }
+    }
+
+    .vul-point {
+      stroke: @darkColor;
+      &:hover {
+        stroke: @hoverColor;
+        > .vul-point-info-caption {
+          stroke: @hoverColor;
+        }
+      }
+    }
+
+    .vul-point-info-caption {
+      &:hover {
+        font-size: @zoomInFontSize !important;
+      }
+    }
+
+  }
+
+  &-house-scale {
+    .vul-scale-divisions > line {
+      &:nth-child(1), &:nth-child(10) {
+        stroke: @asMcColor;
+        stroke-width: 2px;
+      }
+      &:nth-child(4), &:nth-child(7) {
+        stroke: @dsIcColor;
+        stroke-width: 2px;
+      }
+    }
+  }
+
+  &-scale-divisions {
+    stroke: @divisionMinor;
+    stroke-width: 1px;
+    opacity: 0.5;
+  }
+
+  &-scale-divisions:hover {
+    stroke-width: 2px;
+  }
+
+  &-aspects line:hover {
+    stroke-width: 4px;
+  }
+  &-aspect {
+    &-60, &-90, &-120, &-180 {
+      stroke-width: 1.5px;
+    }
+    &-30, &-60, &-120 {
+      stroke: @harmonicAspectColor;
+    }
+    &-90, &-180 {
+      stroke: @stressedAspectColor;
+    }
+    &-45, &-135 {
+      stroke: @stressedAspectColor;
+      stroke-dasharray: 8px 2px;
+    }
+    &-36, &-72, &-144 {
+      stroke: #0c0;
+    }
+
+    &-40, &-80, &-160 {
+      stroke: #0aa;
+      stroke-dasharray: 4px 2px;
+    }
+  }
+
+  &-credits {
+    font-size: 12px;
+    opacity: 0.4
+  }
+}
+
+.no-fill {
+  fill: none;
+}
+
+.no-stroke {
+  stroke: none;
+}

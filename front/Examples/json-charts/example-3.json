@@ -1,0 +1,120 @@
+{
+  "innerRadius": 70,
+  "width": 600,
+  "height": 600,
+  "key": "example-chart-3",
+  "direction": -1,
+  "startPosition": 2,
+  "sections": [
+    {
+      "class": "\\vulkan\\VisualChart\\VisualChartSection",
+      "key": "sect-1",
+      "info": {
+        "class": "\\vulkan\\Core\\ChartSectionInfo",
+        "dateTime": "1980-01-09 18:15:00",
+        "gmt": 3
+      },
+      "width": 40,
+      "points": [
+        0,        1,        2,        3,        4,        5,        6
+      ],
+      "scales": [
+        {
+          "class": "\\vulkan\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            0,
+            -0.12
+          ],
+          "sectorCount": 72
+        },
+        {
+          "class": "\\vulkan\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            1,
+            0.9
+          ],
+          "sectorCount": 36,
+          "majorStep": 3
+        }
+      ],
+      "pointFontSize": 18,
+      "showPointInfo": false,
+      "houses": []
+    },
+    {
+      "class": "\\vulkan\\VisualChart\\VisualChartSection",
+      "key": "sect-2",
+      "cssClass": "section-2",
+      "info": {
+        "class": "\\vulkan\\Core\\ChartSectionInfo",
+        "dateTime": "2001-05-09 18:15:00",
+        "gmt": 4
+      },
+      "scales": [
+        {
+          "class": "\\vulkan\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            1,
+            0.8
+          ],
+          "sectorCount": 12
+        }
+      ],
+      "width": 60,
+      "points": [
+        0,        1,        2,        3,        4,        5,        6,        7,        8,        9,        10
+      ],
+      "houses": [],
+      "pointFontSize": 18
+    },
+    {
+      "class": "\\vulkan\\VisualChart\\VisualChartSection",
+      "width": 50,
+      "key": "system",
+      "cssClass": "section-2",
+      "scales": [
+        {
+          "class": "\\vulkan\\VisualChart\\VisualAstroSignScale",
+          "clip": [
+            0,
+            0.95
+          ],
+          "sectorCount": 12,
+          "active": 1
+        },
+        {
+          "class": "\\vulkan\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            1.45, 1.6
+          ],
+          "sectorCount": 36,
+          "majorStep": 3
+        },
+        {
+          "class": "\\vulkan\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            0, 0.1
+          ],
+          "sectorCount": 72,
+          "majorStep": 6
+        },
+        {
+          "class": "\\vulkan\\VisualChart\\GlobalHouseSectionScale",
+          "attachedSection": "sect-2",
+          "stickOutDistance": 2
+        }
+      ]
+    }
+  ],
+  "aspectManager": {
+    "class": "vulkan\\Core\\AspectsOrbs\\AspectManager",
+    "orbCalcType": 2,
+    "aspectSet": {
+      "class": "vulkan\\Core\\AspectsOrbs\\GeneralAspectSet"
+    },
+    "aspectedSections": [
+      {"key": "sect-1", "aspectation": 1},
+      {"key": "sect-2", "aspectation": 1}
+    ]
+  }
+}

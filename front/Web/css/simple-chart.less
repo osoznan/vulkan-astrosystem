@@ -1,0 +1,199 @@
+@fireColor: #f00;
+@earthColor: #0f0;
+@airColor: #e80;
+@waterColor: #04f;
+
+@asMcColor: #f00;
+@dsIcColor: #0a6;
+
+@lightColor: #fff;
+@darkColor: #000;
+@harshColor: #f33;
+
+@harmonicAspectColor: #aaa;
+@stressedAspectColor: #a11;
+
+@divisionMajor: #fff;
+@divisionMinor: #aaa;
+
+@microFont: 9px;
+
+@hoverColor: f00;
+
+@pointCaptionColor: @darkColor;
+@cuspCaptionColor: #fff;
+
+.vul {
+  &-container  {
+    background: @darkColor;
+  }
+  &-inner-circle {
+    opacity: 0.8;
+    fill: @darkColor;
+  }
+  &-scale {
+    &:hover *{
+    }
+    &-inner-circle {
+      stroke: @darkColor;
+    }
+    &-outer-circle {
+      stroke: #000;
+    }
+
+    &-divisions {
+      stroke: @harshColor;
+      stroke-width: 1px;
+      stroke-dasharray: none;
+    }
+    &-major-divisions {
+      stroke: @divisionMajor;
+      stroke-width: 2px;
+      stroke-dashoffset: 3px 5px;
+    }
+    &-captions > text {
+      text-anchor: middle;
+      cursor: pointer;
+      &:nth-child(4n+1) {
+        stroke: @fireColor;
+      }
+      &:nth-child(4n+2) {
+        stroke: @earthColor;
+      }
+      &:nth-child(4n+3) {
+        stroke: @airColor;
+      }
+      &:nth-child(4n+4) {
+        stroke: @waterColor;
+      }
+    }
+  }
+
+  &-point {
+    fill: #000;
+    stroke: @pointCaptionColor;
+    cursor: pointer;
+    text-anchor: middle;
+    &:hover {
+      stroke: red;
+      .vul-point-info-caption, .vul-point-retrograde {
+        stroke: @hoverColor;
+        font-size: @microFont;
+      }
+    }
+    &-pos {
+      fill: #eff;
+      &-inner {
+        fill: none;
+      }
+    }
+    &-info-caption {
+      stroke: #444;
+      font-size: @microFont;
+    }
+    .vul-point-retrograde {
+      font-size: @microFont;
+      stroke: @harshColor;
+    }
+  }
+
+  &-section {
+    fill: @lightColor;
+    &-ring {
+      fill: @lightColor;
+    }
+  }
+
+  &-global-house-scale {
+    .vul-scale{
+      &-divisions > line {
+        stroke: #aaf;
+        stroke-width: 2px;
+        &:nth-child(1), &:nth-child(10) {
+          stroke: @asMcColor;
+          stroke-width: 2px;
+        }
+        &:nth-child(4), &:nth-child(7) {
+          stroke: @dsIcColor;
+          stroke-width: 2px;
+        }
+      }
+    }
+    .vul-point-caption {
+      stroke: @cuspCaptionColor;
+      fill: #000;
+      &:hover {
+        stroke: red;
+      }
+    }
+    .vul-point-info-caption {
+      stroke: @cuspCaptionColor;
+      text-anchor: middle;
+      font-size: @microFont;
+    }
+
+  }
+
+  &-scale-divisions:hover {
+    stroke-width: 2px;
+  }
+
+  &-house-scale {
+    .vul-scale-divisions > line {
+      &:nth-child(1), &:nth-child(10) {
+        stroke: @asMcColor;
+        stroke-width: 2px;
+      }
+      &:nth-child(4), &:nth-child(7) {
+        stroke: @dsIcColor;
+        stroke-width: 2px;
+      }
+    }
+  }
+
+  &-scale-divisions {
+    stroke: #777;
+    stroke-width: 1px;
+    opacity: 0.5;
+  }
+
+  &-aspects line:hover {
+    stroke-width: 4px;
+  }
+  &-aspect {
+    &-60, &-90, &-120, &-180 {
+      stroke-width: 1.5px;
+    }
+    &-30, &-60, &-120 {
+      stroke: @harmonicAspectColor;
+    }
+    &-90, &-180 {
+      stroke: @stressedAspectColor;
+    }
+    &-45, &-135 {
+      stroke: @stressedAspectColor;
+      stroke-dasharray: 8px 2px;
+    }
+    &-36, &-72, &-144 {
+      stroke: #0c0;
+    }
+
+    &-40, &-80, &-160 {
+      stroke: #00a;
+      stroke-dasharray: 4px 2px;
+    }
+  }
+
+  &-credits {
+    font-size: 12px;
+    opacity: 0.4
+  }
+}
+
+.no-fill {
+  fill: none;
+}
+
+.no-stroke {
+  stroke: none;
+}

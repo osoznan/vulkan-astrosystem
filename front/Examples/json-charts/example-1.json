@@ -1,0 +1,88 @@
+{
+  "innerRadius": 120,
+  "width": 500,
+  "height": 500,
+  "key": "example-chart-2",
+  "direction": 1,
+  "startPosition": 1,
+  "sections": [
+    {
+      "class": "\\vulkan\\VisualChart\\VisualChartSection",
+      "key": "section-1",
+      "info": {
+        "class": "\\vulkan\\Core\\ChartSectionInfo",
+        "dateTime": "1015-11-09 18:15:00",
+        "gmt": 2
+      },
+      "width": 40,
+      "points": [
+        0,        1,        2,        3,        4,        5,        6
+      ],
+      "scales": [
+        {
+          "class": "\\vulkan\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            0,
+            -0.12
+          ],
+          "sectorCount": 72
+        },
+        {
+          "class": "\\vulkan\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            1,
+            0.9
+          ],
+          "sectorCount": 36,
+          "majorStep": 3
+        }
+      ],
+      "pointFontSize": 16,
+      "showPointInfo": 1,
+      "houses": []
+    },
+    {
+      "class": "\\vulkan\\VisualChart\\VisualChartSection",
+      "width": 30,
+      "key": "system",
+      "cssClass": "section-2",
+      "scales": [
+        {
+          "class": "\\vulkan\\VisualChart\\VisualAstroSignScale",
+          "clip": [
+            0,
+            0.95
+          ],
+          "sectorCount": 12
+        },
+        {
+          "class": "\\vulkan\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            1, 1.2
+          ],
+          "sectorCount": 36
+        },
+        {
+          "class": "\\vulkan\\VisualChart\\VisualEqualSectionScale",
+          "clip": [
+            0, -0.1
+          ],
+          "sectorCount": 72,
+          "majorStep": 6
+        }
+      ]
+    }
+  ],
+
+  "globalHouses": {
+    "attachedSection": "section-1",
+    "stickOutDistance": 12
+  },
+
+  "aspectManager": {
+    "aspectedSections": [
+      {"key": "section-1", "aspectation": 1},
+      {"key": "section-1", "aspectation": 1}
+    ]
+  }
+}
