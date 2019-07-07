@@ -12,9 +12,3 @@ Vulkan Astrosystem uses Swetest of DestinyLab (https://github.com/DestinyLab/swe
 You can attach any other ephemeris calculations.
 
 Requirements: PHP 5.6 or later.
-
-See http://astrolog-online.net/vulkan/help/ for help.
-
-Installation notes: http://astrolog-online.net/vulkan/help/?p=getting-started\installation
-
-Vulkan AstroSystem Overview: http://astrolog-online.net/vulkan/help/?p=getting-started\intro
