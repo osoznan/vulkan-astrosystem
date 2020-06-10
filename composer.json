@@ -2,15 +2,14 @@
   "name": "osoznan/vulkan-astrosystem",
   "description": "Astrological system",
   "type": "library",
-  "version": "0.1",
+  "version": "1.0",
   "homepage": "http://astrolog-online.net/vulkan/help/",
   "license": "BSD-3-Clause",
   "keywords": ["astrology", "natal", "chart"],
   "minimum-stability": "dev",
-
   "authors": [
     {
-      "name": "Zemlyansky Alexander",
+      "name": "Alexander Zemlyansky",
       "email": "meraponimaniya@mail.ru"
     }
   ],
@@ -19,8 +18,8 @@
   },
   "autoload": {
     "psr-4": {
-      "vulkan-astrosystem-master\\": "\\src",
-      "vulkan-astrosystem-master\\front\\": "\\front"
+      "vulkan\\": "src/",
+      "vulkan\\front\\": "front/"
     }
   }
 }
